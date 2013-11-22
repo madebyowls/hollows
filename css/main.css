@@ -565,9 +565,72 @@ a:focus {
   }
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
 
-/*Hide Labels, using placeholders*/
-label.sr-only{
+/* Layout */
+.container{
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 30px;
+}
+
+.tab{
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  margin-left: -97px;
+  width: 194px;
+  height: 50px;
+  text-align: center;
+  background: inherit;
+  line-height: 50px;
+}
+.tab:before{
+  display: block;
+  position: absolute;
+  content:'';
+  width: 100%;
+  height: 12px;
+  background: inherit;
+  top: -6px;
+  border-radius: 50%;
+}
+
+header,section{ position: relative; padding-bottom: 50px;}
+
+header{ background:red;}
+section{ background:green;}
+section + section{ background:purple;}
+section + section + section{ background: blue;}
+section + section + section + section{ background: red;}
+
+/* Sections */
+
+/* Helpers */
+@media (max-width: 599px) {
+  .only-lg{
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .only-sm{
+    display: none;
+  }
+}
+
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+
+.sr-only{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -577,3 +640,4 @@ label.sr-only{
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
