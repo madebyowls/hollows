@@ -187,7 +187,20 @@
 
 <script>
 	$(function() {
+		// SVG Fallback
 		svgeezy.init('nocheck', 'png');
+
+		// Smoothscroll on-page links
+		$('a[href^="#"]').on('click', function(e){
+			var dest = $(this).attr('href');
+			var fromTop = Math.round($(dest).offset().top);
+			var scrollDuration = 200;
+			if( $(this).parent().is('header') ){ // Slow it down for the long haul
+				scrollDuration = 1000;
+			}
+			$('html, body').animate({'scrollTop': fromTop}, scrollDuration);
+			e.preventDefault();
+		});
 	});
 </script>
 
