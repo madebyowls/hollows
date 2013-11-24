@@ -218,28 +218,6 @@ html {
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
-}
-
-a {
-  color: #428bca;
-  text-decoration: none;
-}
-a:hover,
-a:focus {
-  color: #2a6496;
-  text-decoration: underline;
-}
-a:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
 
  /*!
   * Bootstrap v3.0.2 Grid
@@ -607,8 +585,46 @@ a:focus {
 }
 
 /* Typography */
+body{
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  line-height: 1.3333333;
+  color: #fff;
+}
 h1, h2, h3, h4, h5, h6{
   margin: 0;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: Caecilia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 48px;
+}
+h3{
+  margin-bottom: 15px;
+  font-family: Caecilia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.subhead{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #96C8D2;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+p{
+  margin: 0 0 15px;
 }
 
 /* Layout */
@@ -616,6 +632,51 @@ h1, h2, h3, h4, h5, h6{
   margin: 0 auto;
   max-width: 960px;
   padding: 0 30px;
+}
+
+header,section{
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 58px 0 108px;
+}
+
+header{
+  background-image: url(../img/header.jpg);
+}
+#info{
+  background: #fff;
+}
+#features{
+  background-color: #A2B83E;
+  background-image: url(../img/features.jpg);
+  background-position: top center;
+}
+
+#plan{
+  background:#fff;
+}
+.plan-img{
+  width: 100%;
+}
+.plan-gradient{
+  background:#251118;
+  background-image: -webkit-linear-gradient(top, #251118 0, #501E46 100%);
+  background-image: -moz-linear-gradient(top, #251118 0, #501E46 100%);
+  background-image: -o-linear-gradient(top, #251118 0, #501E46 100%);
+  background-image: -ms-linear-gradient(top, #251118 0, #501E46 100%);
+  background-image: linear-gradient(top, #251118 0, #501E46 100%);
+}
+
+#reservations{
+  background: #96C8D2;
+}
+
+/* Common */
+.mark{
+   background: url(../img/vector-sprite.png) top left no-repeat;
+   background-image: none, url(../img/vector-sprite.svg);
 }
 
 .tab{
@@ -627,8 +688,11 @@ h1, h2, h3, h4, h5, h6{
   width: 194px;
   height: 50px;
   text-align: center;
-  background: inherit;
+  background-color: inherit;
   line-height: 50px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 4px;
 }
 .tab:before{
   display: block;
@@ -641,15 +705,110 @@ h1, h2, h3, h4, h5, h6{
   border-radius: 50%;
 }
 
-header,section{ position: relative; padding-bottom: 50px;}
-
-header{ background:red;}
-section{ background:green;}
-section + section{ background:purple;}
-section + section + section{ background: blue;}
-section + section + section + section{ background: red;}
-
 /* Sections */
+header{
+  padding: 125px 0 75px;
+}
+
+header .tab{
+  top: 0;
+  background-color: #96C8D2;
+  height: 40px;
+  width: 372px;
+  margin-left: -186px;
+}
+header .tab:before{
+  height:18px;
+  top: auto;
+  bottom: -9px;
+  border-radius: 0 0 50% 50%;
+}
+
+header h1 img{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 30px;
+}
+
+header .mark{
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  width: 75px;
+  height: 75px;
+  background-position: -25px 0;
+}
+
+#info{
+  color: #999;
+}
+
+#info .tab{
+  width: 60px;
+  margin-left: -30px;
+  height: 24px;
+  top: -24px;
+}
+
+.down-arrow{
+  background: url(../img/vector-sprite.png) top left no-repeat;
+  background-image: none, url(../img/vector-sprite.svg);
+  display: inline-block;
+  width: 24px;
+  height: 13px;
+  margin-top: 12px;
+}
+
+#info h2{
+  color: #B5A990;
+}
+
+#info .subhead{
+  color: #A5BC22;
+}
+
+#features{
+  text-align: center;
+  padding-bottom: 68px
+}
+
+#features .row{
+  margin-top: 60px;
+}
+
+#features .col-sm-12{
+  margin-bottom: 60px;
+}
+
+.feature{
+  display: inline-block;
+  width: 217px;
+  height: 217px;
+  margin-bottom: 30px;
+  background: url(../img/raster-sprite.png) no-repeat top left;
+}
+.feature-center{
+  background-position: -217px 0;
+}
+.feature-right{
+  background-position: -433px 0;
+}
+
+#plan, #plan .tab{
+  color: #ccc;
+}
+
+.plan-gradient {
+  padding-top: 75px;
+}
+
+#plan h2{
+  color: #96C8D2;
+  margin-bottom: 65px;
+}
+#plan h3{
+  color: #A078A0;
+}
 
 /* Helpers */
 @media (max-width: 599px) {
