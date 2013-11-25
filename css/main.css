@@ -863,6 +863,95 @@ header .mark{
   color: #96C8D2;
 }
 
+#reservations h3{
+  color: #CAE3E8;
+}
+#reservations img{
+  opacity: .5;
+  max-width: 66%;
+}
+
+#reservations form .row{
+  margin-left: -10px;
+  margin-right: -10px;
+}
+#reservations form .col-lg-6{
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+#reservations .medium{
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #fff;
+  padding: 20px;
+  font-family: "Proxima Nova";
+}
+
+#reservations form .radio{
+  text-indent: -999px;
+}
+
+#reservations form .radio + label{
+  margin-top:11px;
+  display: block;
+}
+#reservations form .radio + label:before{
+  content: '';
+  display: inline-block;
+  vertical-align: -1px;
+  width: 14px;
+  height: 14px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+#reservations form .radio:checked + label:before{
+  background: #461E3C;
+}
+
+
+#reservations .short{
+  height: 40px;
+  font-size: 16px;
+}
+
+#reservations form [disabled]{
+  background: #ADD3DA;
+}
+
+#reservations form [disabled]::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #D6E9ED;
+}
+#reservations form [disabled]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #D6E9ED;
+}
+#reservations form [disabled]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #D6E9ED;
+}
+#reservations form [disabled]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #D6E9ED;
+}
+
+#reservations .submit,
+#reservations .submit[disabled]{
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  background-color: #461E3C;
+}
+
+#reservations .submit[disabled]{
+  opacity: .5;
+}
+
+
 /* Helpers */
 .pull-left,
 .lg-pull-left{ float: left; }
@@ -872,6 +961,10 @@ header .mark{
 .clear-left{ clear: left; }
 .clear-right{ clear: right; }
 .clear-both{ clear: both; }
+
+.hide, .hidden{
+  display: none;
+}
 
 @media (max-width: 599px) {
   .only-lg{ display: none; }
