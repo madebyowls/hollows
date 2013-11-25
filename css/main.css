@@ -938,16 +938,22 @@ span.zoom{
 
 #reservations select.medium{
   -webkit-appearance: none;
-  padding-right: 30px;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 #reservations .down-arrow{
+  display: none;
   float: right;
   position: relative;
   z-index: 10;
   margin-top: -30px;
   margin-right: 10px;
   -webkit-transform: scale(.6);
+  -moz-transform: scale(.6);
+  -o-transform: scale(.6);
+  -ms-transform: scale(.6);
+  transform: scale(.6);
 }
 
 
