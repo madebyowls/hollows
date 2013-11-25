@@ -72,18 +72,28 @@
 						<p>If you love big trees and hedges, cedar shake shingles and board & batten siding, with white lights strung across a private lane lighting your safe walks at night, well&hellip; we&rsquo;ve built your dream.</p>
 					</div>
 					<div class="col-sm-12 col-lg-6"><!-- Thumbnails -->
-						<h4>Architectural Style</h4>
+						<h4>Architectural Style<span class="zoom"></span></h4>
 						<div class="row thumbnails">
 							<div class="col-sm-6">
-								<img src="img/architectural-style/thumb-img-1.png" width="200" height="200">
+								<a href="img/architectural-style/img-1.png" class="fancybox" rel="architecture" target="_blank">
+									<img src="img/architectural-style/thumb-img-1.png" width="200" height="200">
+								</a>
 							</div>
 							<div class="col-sm-3">
-								<img src="img/architectural-style/thumb-img-2.png" width="90" height="90">
-								<img src="img/architectural-style/thumb-img-3.png" width="90" height="90">
+								<a href="img/architectural-style/img-2.png" class="fancybox" rel="architecture" target="_blank">
+									<img src="img/architectural-style/thumb-img-2.png" width="90" height="90">
+								</a>
+								<a href="img/architectural-style/img-3.png" class="fancybox" rel="architecture" target="_blank">
+									<img src="img/architectural-style/thumb-img-3.png" width="90" height="90">
+								</a>
 							</div>
 							<div class="col-sm-3">
-								<img src="img/architectural-style/thumb-img-4.png" width="90" height="90">
-								<img src="img/architectural-style/thumb-img-5.png" width="90" height="90">
+								<a href="img/architectural-style/img-4.png" class="fancybox" rel="architecture" target="_blank">
+									<img src="img/architectural-style/thumb-img-4.png" width="90" height="90">
+								</a>
+								<a href="img/architectural-style/img-5.png" class="fancybox" rel="architecture" target="_blank">
+									<img src="img/architectural-style/thumb-img-5.png" width="90" height="90">
+								</a>
 							</div>
 						</div>
 					</div>
@@ -226,6 +236,10 @@
 
 	<footer>
 		<div class="container">
+			<div class="mark"></div>
+
+			<p>Classic Custom Home Lots in Gilbert Arizona</p>
+			<small>Copyright &copy; 2013-2014, The Hollows Group LLC. All rights reserved.</small>
 		</div>
 	</footer>
 
@@ -262,6 +276,16 @@
 
 		// Fit Phone Number
 		$('.phone').fitText(.6, { maxFontSize: '60px'});
+
+		// Lightbox
+		if(window.innerWidth >= 768){
+			$(".fancybox").fancybox({
+				padding: 0,
+				openEffect:'elastic',
+				closeEffect:'elastic'
+			});
+		}
+
 	});
 </script>
 
