@@ -112,12 +112,13 @@
 	<section id="reservations">
 		<a href="#reservations" class="tab">Reservations</a>
 		<div class="container">
-			<h2>Reserve your family&rsquo;s Hollow Today</h2>
+			<h2>Reserve your family&rsquo;s Hollow Today.</h2>
 			<div class="row">
 				<div class="col-sm-12 col-lg-6">
 					<h3>Welcome home.</h3>
 					<p>These 16 heirloom-quality homesites are going fast. Don&rsquo;t miss out on owning a part of this timeless classic.</p>
-					<img src="img/logo.svg" alt="The Hollows - Gilbert">
+					<p class="phone"><small>(480)</small>433-7990</p>
+					<img src="img/logo.svg" class="only-lg" alt="The Hollows - Gilbert">
 				</div>
 				<div class="col-sm-12 col-lg-6">
 					<form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://madebyowls.wufoo.com/forms/z1ybwzn105iui0k/#public">
@@ -134,28 +135,29 @@
 
 						<div class="row">
 							<div class="col-lg-6">
-								<label class="desc sr-only" id="title232" for="Field232">Mobile</label>
-								<input id="Field232" name="Field232" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup="" placeholder="Mobile" />
+								<label class="desc sr-only" id="title5" for="Field5">Email</label>
+								<input id="Field5" name="Field5" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" placeholder="Email" />
 							</div>
 							<div class="col-lg-6">
-								<label class="desc sr-only" id="title5" for="Field5">Email</label>
-								<input id="Field5" name="Field5" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="4" placeholder="Email" />
+								<label class="desc sr-only" id="title232" for="Field232">Mobile</label>
+								<input id="Field232" name="Field232" type="text" class="field text medium" value="" maxlength="255" tabindex="4" onkeyup="" placeholder="Mobile" />
 							</div>
 						</div>
 
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-lg-6 select">
 								<label class="desc sr-only" id="title7" for="Field7">Timeframe to Build</label>
 								<select id="Field7" name="Field7" class="field select medium" tabindex="5" >
 									<option value="Timeframe to Build" selected disabled>Timeframe to Build</option>
 									<option value="0-3 Months">0-3 Months</option>
 									<option value="4-6 Months">4-6 Months</option>
 									<option value="7-9 Months">7-9 Months</option>
-									<option value="10-12 Month">10-12 Month</option>
+									<option value="10-12 Month">10-12 Months</option>
 									<option value="12+ Months">12+ Months</option>
 								</select>
+								<span class="down-arrow"></span>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-lg-6 select">
 								<label class="desc sr-only" id="title8" for="Field8">Desired Lot No.</label>
 								<select id="Field8" name="Field8" class="field select medium" tabindex="6" >
 									<option value="Desired Lot No." selected disabled>Desired Lot No.</option>
@@ -165,6 +167,7 @@
 									<option value="4" >4</option>
 									<option value="5" >5</option>
 								</select>
+								<span class="down-arrow"></span>
 							</div>
 						</div>
 
@@ -212,7 +215,7 @@
 									<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
 									<input type="hidden" id="idstamp" name="idstamp" value="VS5UR0EbWoBgavCsNOLD8/Rn/K3trxAYdYPQP08NXL8=" />
 								</div>
-								<input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Place Request" />
+								<input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Place Request" tabindex="13"/>
 							</div>
 						</div>
 					</form>
@@ -256,6 +259,9 @@
 			$('input.disabled').attr('disabled', true);
 			$(this).closest('.row').find('input.disabled').attr('disabled', false).focus();
 		});
+
+		// Fit Phone Number
+		$('.phone').fitText(.6, { maxFontSize: '60px'});
 	});
 </script>
 

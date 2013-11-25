@@ -425,7 +425,7 @@ html {
 .col-sm-offset-0 {
   margin-left: 0%;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11 {
     float: left;
   }
@@ -586,7 +586,7 @@ html {
 
 /* Typography */
 body{
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.3333333;
   color: #fff;
@@ -733,8 +733,8 @@ header .tab{
   top: 0;
   background-color: #96C8D2;
   height: 40px;
-  width: 372px;
-  margin-left: -186px;
+  width: 320px;
+  margin-left: -160px;
 }
 header .tab:before{
   height:18px;
@@ -800,12 +800,20 @@ header .mark{
 }
 
 .feature{
-  display: inline-block;
-  width: 217px;
+  display: block;
+  width: 216px;
   height: 217px;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   background: url(../img/raster-sprite.png) no-repeat top left;
 }
+
+/*@media (max-width: 767px){
+  .feature{
+    width: 150px;
+    height: 150px;
+    background-size: 450px;
+  }
+}*/
 .feature-center{
   background-position: -217px 0;
 }
@@ -843,6 +851,12 @@ header .mark{
   color: #A078A0;
 }
 
+#plan img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .row.thumbnails{
   margin-right: -10px;
   margin-left: -10px;
@@ -863,9 +877,27 @@ header .mark{
   color: #96C8D2;
 }
 
+#reservations h2{
+  margin-bottom: 35px;
+}
+
 #reservations h3{
   color: #CAE3E8;
 }
+
+#reservations .phone{
+  font-family: Caecilia, serif;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 30px 0 80px;
+  line-height: 60px;
+}
+#reservations .phone small{
+  font-size: 14px;
+  line-height: 25px;
+  vertical-align: top;
+}
+
 #reservations img{
   opacity: .5;
   max-width: 66%;
@@ -877,7 +909,7 @@ header .mark{
 }
 #reservations form .col-lg-6{
   padding: 0 10px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #reservations .medium{
@@ -885,24 +917,43 @@ header .mark{
   height: 50px;
   border: none;
   background: #fff;
-  padding: 20px;
-  font-family: "Proxima Nova";
+  padding: 15px;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  border-radius: 0;
 }
+
+#reservations select.medium{
+  -webkit-appearance: none;
+  padding-right: 30px;
+}
+
+#reservations .down-arrow{
+  float: right;
+  position: relative;
+  z-index: 10;
+  margin-top: -30px;
+  margin-right: 10px;
+  -webkit-transform: scale(.6);
+}
+
 
 #reservations form .radio{
   text-indent: -999px;
 }
 
 #reservations form .radio + label{
-  margin-top:11px;
+  margin-top:9px;
   display: block;
+  padding-left: 25px;
 }
 #reservations form .radio + label:before{
   content: '';
   display: inline-block;
-  vertical-align: -1px;
-  width: 14px;
-  height: 14px;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  margin-left: -25px;
+  margin-right: 2px;
   border: 3px solid #fff;
   border-radius: 50%;
 }
@@ -910,11 +961,11 @@ header .mark{
   background: #461E3C;
 }
 
-
 #reservations .short{
   height: 40px;
   font-size: 16px;
 }
+
 
 #reservations form [disabled]{
   background: #ADD3DA;
@@ -938,7 +989,7 @@ header .mark{
   width: 100%;
   height: 50px;
   font-size: 16px;
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
@@ -950,6 +1001,16 @@ header .mark{
 #reservations .submit[disabled]{
   opacity: .5;
 }
+
+@media (max-width: 767px){
+  #reservations .short{
+    margin-top: -15px;
+  }
+  #reservations .submit{
+    margin-top: 10px;
+  }
+}
+
 
 
 /* Helpers */
@@ -966,13 +1027,13 @@ header .mark{
   display: none;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   .only-lg{ display: none; }
   .lg-pull-right,
   .lg-pull-left{ float: none; }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .only-sm{ display: none; }
 }
 
