@@ -668,7 +668,7 @@ header{
   background: #fff;
 }
 #features{
-  background-color: #A2B83E;
+  background-color: #a3ae39;
   background-image: url(../img/features.jpg);
   background-position: top center;
 }
@@ -710,7 +710,8 @@ header{
   background-color: inherit;
   line-height: 50px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 4px;
 }
 .tab:before{
@@ -718,7 +719,7 @@ header{
   position: absolute;
   content:'';
   width: 100%;
-  height: 12px;
+  height: 16px;
   background: inherit;
   top: -6px;
   border-radius: 50%;
@@ -732,14 +733,13 @@ header{
 header .tab{
   top: 0;
   background-color: #96C8D2;
-  height: 40px;
   width: 320px;
+  height: 40px;
   margin-left: -160px;
 }
 header .tab:before{
-  height:18px;
   top: auto;
-  bottom: -9px;
+  bottom: -7px;
   border-radius: 0 0 50% 50%;
 }
 
@@ -775,6 +775,12 @@ header .mark{
   margin-left: -30px;
   height: 24px;
   top: -24px;
+  font-size: 0;
+}
+
+#info .tab:before{
+  height: 12px;
+  top: -4px;
 }
 
 .down-arrow{
@@ -783,7 +789,6 @@ header .mark{
   display: inline-block;
   width: 24px;
   height: 13px;
-  margin-top: 12px;
 }
 
 #info h2{
@@ -936,19 +941,37 @@ span.zoom{
   border-radius: 0;
 }
 
+#reservations div.select{
+  position: relative;
+}
 #reservations select.medium{
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance:window;
+  -ms-appearance: none;
   appearance: none;
+  padding-right: 30px;
+}
+
+/* Haxxxxxx for stuuuuupid custom select elements */
+
+/*Firefox*/
+@-moz-document url-prefix() {
+  .moz-wrapper{
+    height: 50px;
+    background: #fff;
+  }
+}
+/*IE*/
+#reservations select.medium::-ms-expand{
+  display: none;
 }
 
 #reservations .down-arrow{
-  display: none;
-  float: right;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -6px;
   z-index: 10;
-  margin-top: -30px;
-  margin-right: 10px;
   -webkit-transform: scale(.6);
   -moz-transform: scale(.6);
   -o-transform: scale(.6);
@@ -957,16 +980,16 @@ span.zoom{
 }
 
 
-#reservations form .radio{
+#reservations form .checkbox{
   text-indent: -999px;
 }
 
-#reservations form .radio + label{
+#reservations form .checkbox + label{
   margin-top:9px;
   display: block;
   padding-left: 25px;
 }
-#reservations form .radio + label:before{
+#reservations form .checkbox + label:before{
   content: '';
   display: inline-block;
   vertical-align: top;
@@ -977,7 +1000,7 @@ span.zoom{
   border: 3px solid #fff;
   border-radius: 50%;
 }
-#reservations form .radio:checked + label:before{
+#reservations form .checkbox:checked + label:before{
   background: #461E3C;
 }
 
@@ -1017,6 +1040,7 @@ span.zoom{
   text-align: center;
   border: none;
   background-color: #461E3C;
+  border-radius: 0;
 }
 
 #reservations .submit[disabled]{
